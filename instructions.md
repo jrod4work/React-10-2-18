@@ -9,3 +9,8 @@ Add these two files in the src/index.js file
 
 import React from 'react';
 import ReactDOM from 'react-dom';
+
+
+In order for Gitkraken to ignore node_modules_
+
+touch .gitignore && echo "node_modules/" >> .gitignore
