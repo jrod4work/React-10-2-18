@@ -2,26 +2,96 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import PropTypes from 'prop-types';
 
-
-
-//MAP
+//6th Example/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 const App = props => {
-  const items = ['Bread', 'Milk', 'Eggs', 'Tea'];
+  const favoriteCars = [
+    'Honda CR-V ',
+    'Toyota Highlander',
+    'Ford F-150',
+    'BMW X3',
+    'Subaru Crosstrek'
+  ];
 
-  return <List items={items} />;
+  return <List favoriteCars={favoriteCars} />;
 };
 
 const List = props => {
-  const listItems = props.items.map((item, index) => (
-    <li key={index}>{item}</li>
+  const listCars = props.favoriteCars.map((car, index) => (
+    <li key={index}>{car}</li>
   ));
-  return <ul>{listItems}</ul>;
+  return <ul>{listCars}</ul>;
 };
 ReactDOM.render(<App />, document.getElementById('root'));
 
+// 5th Example /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-// 3rd Example
+// const App = props => {
+//   const items = [
+//     { name: 'Bread', price: 2.35 },
+//     { name: 'Milk', price: 2.0 },
+//     { name: 'Eggs', price: 3.15 },
+//     { name: 'Tea', price: 4.0 }
+//   ];
+
+//   return (
+//     <div>
+//       <List items={items} />
+//       <Employee name="Elizabeth" age={27} position="Sales Manager" />
+//       <GroceryList item1="Apples" item2="Oranges" item3="Mangos" />
+//     </div>
+//   );
+// };
+
+// const List = props => {
+//   const listItems = props.items.map((item, index) => (
+//     <li key={index}>
+//       {item.name}: {item.price}
+//     </li>
+//   ));
+
+//   return <ul>{listItems}</ul>;
+// };
+
+// const Employee = props => (
+//   <ul>
+//     <li>{props.name}</li>
+//     <li>{props.age}</li>
+//     <li>{props.position}</li>
+//   </ul>
+// );
+
+// const GroceryList = props => (
+//   <ul>
+//     <li>{props.item1}</li>
+//     <li>{props.item2}</li>
+//     <li>{props.item3}</li>
+//   </ul>
+// );
+
+
+// ReactDOM.render(<App />, document.getElementById('root'));
+
+
+// 4th example/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//MAP
+
+// const App = props => {
+//   const items = ['Bread', 'Milk', 'Eggs', 'Tea'];
+
+//   return <List items={items} />;
+// };
+
+// const List = props => {
+//   const listItems = props.items.map((item, index) => (
+//     <li key={index}>{item}</li>
+//   ));
+//   return <ul>{listItems}</ul>;
+// };
+// ReactDOM.render(<App />, document.getElementById('root'));
+
+
+// 3rd Example/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 // const App = props => {
 //   const user = {
 //     name: 'George Bailey', 
@@ -69,7 +139,7 @@ ReactDOM.render(<App />, document.getElementById('root'));
 
 
 
-// Second example
+// Second example/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 // const App = props => {
 //   return (
@@ -99,7 +169,7 @@ ReactDOM.render(<App />, document.getElementById('root'));
 //   document.getElementById('root')
 // );
 
-//1st example*****************
+//1st example/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 // const App = props => {
 //     return (
