@@ -3,22 +3,31 @@ import ReactDOM from 'react-dom';
 import Home from './screens/Home';
 import About from './screens/About';
 import Topics from './screens/Topics';
+import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 
-const Index = ({ pathname }) => {
-    switch (pathname) {
-      case '/about':
-        return <About />;
-      case '/topics':
-        return <Topics />;
-      default:
-        return <Home />;
-    }
-  };
-  
-  let pathname = window.location.pathname;
-  
-  ReactDOM.render(<Index pathname={pathname} />, document.getElementById('root'));
-  
-  window.addEventListener('popstate', () => {
-    pathname = window.location.pathname;
-  });
+
+const App = () => (
+  <Router>
+    <div>
+      <ul>
+        <li>
+          <Link to="/">Home</Link>
+        </li>
+        <li>
+          <Link to="/about">About</Link>
+        </li>
+        <li>
+          <Link to="/topics">Topics</Link>
+        </li>
+      </ul>
+
+      <hr />
+
+      <Route exact path="/" component={Home} />
+      <Route path="/about" component={About} />
+      <Route path="/topics" component={Topics} />
+    </div>
+  </Router>
+);
+
+ReactDOM.render(<App />, document.getElementById('root')); 
