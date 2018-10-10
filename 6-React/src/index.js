@@ -33,9 +33,25 @@
 
 // Impure  function //////////////////////////////
 function travel(props) {
-    props.distance -= props.speed;
+   return props.distance - props.speed;
 }
 
 let trip = { distance: 20, speed: 5 };
+
+trip = {distance: travel(trip), speed: 5};
+
 travel(trip);
 console.log(trip);
+
+
+const parameters = [4, 8, 2, 1, 6];
+
+const maxWithoutSpread = Math.max(
+  parameters[0],
+  parameters[1],
+  parameters[2],
+  parameters[3],
+  parameters[4]
+); // Returns 8
+
+const maxUsingSpread = Math.max(...parameters); // Returns 8
