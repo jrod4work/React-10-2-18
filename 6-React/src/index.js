@@ -28,3 +28,14 @@
 // }
 
 // ReactDOM.render(<App />, document.getElementById('root'));
+
+
+
+// Impure  function //////////////////////////////
+function travel(props) {
+    props.distance -= props.speed;
+}
+
+let trip = { distance: 20, speed: 5 };
+travel(trip);
+console.log(trip);
