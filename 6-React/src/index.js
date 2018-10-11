@@ -32,16 +32,16 @@
 
 
 // Impure  function //////////////////////////////
-function travel(props) {
-   return props.distance - props.speed;
-}
+// function travel(props) {
+//    return props.distance - props.speed;
+// }
 
-let trip = { distance: 20, speed: 5 };
+// let trip = { distance: 20, speed: 5 };
 
-trip = {distance: travel(trip), speed: 5};
+// trip = {distance: travel(trip), speed: 5};
 
-travel(trip);
-console.log(trip);
+// travel(trip);
+// console.log(trip);
 
 
 const parameters = [4, 8, 2, 1, 6];
@@ -56,4 +56,25 @@ const maxWithoutSpread = Math.max(
 
 console.log(maxWithoutSpread);
 
-const maxUsingSpread = Math.max(...parameters); // Returns 8
+const maxUsingSpread = Math.max(...parameters, 9, -2); // Returns 8
+
+console.log(maxUsingSpread);
+
+const someNumbers = [5, 9, 21, 2];
+
+// const newNumbers = [...someNumbers, 17]; // returns [5, 9, 21, 2, 17]
+
+// console.log(newNumbers)
+
+const newNumbers = [17, ...someNumbers]; // [17, 5, 9, 21, 2]
+
+console.log(newNumbers)
+
+const person = {
+  name: 'Jess',
+  age: 42
+};
+
+const newPerson = { ...person, name: 'Tyler' }; // returns { name: "Jess", age: 42 }
+
+console.log(newPerson);
