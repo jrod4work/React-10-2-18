@@ -54,4 +54,6 @@ const maxWithoutSpread = Math.max(
   parameters[4]
 ); // Returns 8
 
+console.log(maxWithoutSpread);
+
 const maxUsingSpread = Math.max(...parameters); // Returns 8
