@@ -43,38 +43,69 @@
 // travel(trip);
 // console.log(trip);
 
+// spread operator ////////////////////////////////////////////////////////////////////
 
-const parameters = [4, 8, 2, 1, 6];
+// const parameters = [4, 8, 2, 1, 6]; 
 
-const maxWithoutSpread = Math.max(
-  parameters[0],
-  parameters[1],
-  parameters[2],
-  parameters[3],
-  parameters[4]
-); // Returns 8
+// const maxWithoutSpread = Math.max(
+//   parameters[0],
+//   parameters[1],
+//   parameters[2],
+//   parameters[3],
+//   parameters[4]
+// ); // Returns 8
 
-console.log(maxWithoutSpread);
+// console.log(maxWithoutSpread);
 
-const maxUsingSpread = Math.max(...parameters, 9, -2); // Returns 8
+// const maxUsingSpread = Math.max(...parameters, 9, -2); // Returns 8
 
-console.log(maxUsingSpread);
+// console.log(maxUsingSpread);
 
-const someNumbers = [5, 9, 21, 2];
+// const someNumbers = [5, 9, 21, 2];
 
-// const newNumbers = [...someNumbers, 17]; // returns [5, 9, 21, 2, 17]
+// // const newNumbers = [...someNumbers, 17]; // returns [5, 9, 21, 2, 17]
+
+// // console.log(newNumbers)
+
+// const newNumbers = [17, ...someNumbers]; // [17, 5, 9, 21, 2]
 
 // console.log(newNumbers)
 
-const newNumbers = [17, ...someNumbers]; // [17, 5, 9, 21, 2]
+// const person = {
+//   name: 'Jess',
+//   age: 42
+// };
 
-console.log(newNumbers)
+// const newPerson = { ...person, name: 'Tyler' }; // returns { name: "Jess", age: 42 }
 
-const person = {
-  name: 'Jess',
-  age: 42
+// console.log(newPerson);
+
+// function isEnough(value) {
+//   return value >= 10;
+// }
+
+// const filtered = [5,12, 5, 8, 130, 44].filter(value => value >= 10);
+// // filtered is equal to [12, 130, 44]
+
+// console.log(filtered)
+
+// 1.
+var filtered = car => {
+  return car.name === 'ford';
 };
+const arr = [
+  { name: 'chevy', count: 2 },
+  { name: 'ford', count: 5 },
+  { name: 'acura', count: 3 },
+  { name: 'honda', count: 16 }
+].filter(filtered);
 
-const newPerson = { ...person, name: 'Tyler' }; // returns { name: "Jess", age: 42 }
+console.log(arr);
 
-console.log(newPerson);
+// 2.
+// const arr = ['Bill', 'Joe', 'Emily', 'Andrea'];
+// const newStudents = ['Andrew', 'Tasha', 'Carol', 'George'];
+
+// const fullArray = [...arr, ...newStudents];
+
+// console.log(fullArray);
